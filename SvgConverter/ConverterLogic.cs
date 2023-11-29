@@ -251,7 +251,7 @@ namespace SvgConverter
             {
                 //get Name of DrawingGroup
                 var nameDg = node.Attribute(Nsx + "Key").Value;
-                var nameImg = nameDg.Replace("DrawingGroup", "DrawingImage");
+                var nameImg = nameDg.Replace("DrawingGroup", "");
                 //<DrawingImage x:Key="xxx" Drawing="{StaticResource cloud_5_icon_DrawingGroup}"/>
                 var drawingImage = new XElement(NsDef + "DrawingImage",
                     new XAttribute(Nsx + "Key", nameImg),
