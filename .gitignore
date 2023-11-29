@@ -9,6 +9,7 @@
 [Rr]elease/
 # Visual Studio 2015 cache/options directory
 .vs/
+.idea/
 *_i.c
 *_p.c
 *.ilk
