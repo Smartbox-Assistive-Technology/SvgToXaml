@@ -8,9 +8,23 @@ namespace SvgConverter
         private string _filepath;
         private string _xaml;
         private string _svg;
-        private string _objectName;
         private DependencyObject _convertedObj;
+        private string _objectName;
 
+        public string ObjectName
+        {
+            get
+            {
+                if(_objectName == null)
+                {
+                    // Force the object to convert to produce the object name
+                    _ = ConvertedObj;
+                }
+                return _objectName;
+            }
+
+            private set => _objectName = value;
+        }
         public string Filepath
         {
             get { return _filepath; }
