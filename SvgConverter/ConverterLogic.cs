@@ -337,7 +337,7 @@ namespace SvgConverter
         internal static DrawingGroup SvgFileToWpfObject(string filepath, WpfDrawingSettings wpfDrawingSettings)
         {
             if (wpfDrawingSettings == null) //use defaults if null
-                wpfDrawingSettings = new WpfDrawingSettings { IncludeRuntime = false, TextAsGeometry = false, OptimizePath = true };
+                wpfDrawingSettings = new WpfDrawingSettings { IncludeRuntime = false, TextAsGeometry = false, OptimizePath = true, EnsureViewboxSize = true, EnsureViewboxPosition = true};
             var reader = new FileSvgReader(wpfDrawingSettings);
 
             //this is straight forward, but in this version of the dlls there is an error when name starts with a digit
